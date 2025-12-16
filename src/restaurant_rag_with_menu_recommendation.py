@@ -111,7 +111,7 @@ def normalize_tokens(text, is_use_v=True):
 
 def preprocess_query(text):
     stopwords = {"에서","으로","은","는","이","가","을","를","의","도","에",
-                 "로","과","와","고","들","좀","처럼","도","한"}
+                "로","과","와","고","들","좀","처럼","도","한"}
     tokens = normalize_tokens(text)
     return [t for t in tokens if t not in stopwords]
 
@@ -191,7 +191,11 @@ import math
 import xml.etree.ElementTree as ET
 from math import radians, cos, sin, asin, sqrt
 
-SERVICE_KEY = "47574e7361686a6835337a426e726c"
+# SERVICE_KEY는 환경 변수에서 읽어옵니다
+# export SERVICE_KEY="your-service-key" 또는 .env 파일 사용
+SERVICE_KEY = os.environ.get("SERVICE_KEY")
+if not SERVICE_KEY:
+    raise ValueError("SERVICE_KEY 환경 변수가 설정되지 않았습니다.")
 # REALTIME_CITY_DATA_URL = f'http://openapi.seoul.go.kr:8088/{SERVICE_KEY}/json/citydata/1/1000/'
 REALTIME_CITY_DATA_URL = f'http://openapi.seoul.go.kr:8088/{SERVICE_KEY}/xml/citydata/1/1000/'
 ATTR_LOCATION_KEY ={
