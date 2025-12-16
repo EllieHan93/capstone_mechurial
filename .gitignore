@@ -1,0 +1,43 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Node modules (if applicable)
+node_modules/
+
+# Python (if applicable)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+
+# Large video files (use GitHub Releases or LFS instead)
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Large model files
+*.pt
+*.pth
+*.h5
+*.pb
+
+# Large data files (over 50MB)
+data/final_Bert_MLP_model.pt
+data/gpt classified_review.xlsx
+document/발표/메추리알 발표영상_최종.mp4
+
+
